@@ -40,10 +40,26 @@ nav{
 
 .nav-links li a{
     transition: all 0.3s ease 0s;
+    opacity: 1;
 }
 .nav-links li a:hover{
-    color: #c2a3a3e8;
+    opacity: 0.4;
+    transform: scale(0.9);
 }
 .cta-div a{
     color: #820ad1;
+    position: relative;
+}
+.cta-div a::after{
+    content: " ";
+    width: 0;
+    height: 2px;
+    background-color: #820ad1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+.cta-div a:hover::after{
+    width: 100%;
 }
